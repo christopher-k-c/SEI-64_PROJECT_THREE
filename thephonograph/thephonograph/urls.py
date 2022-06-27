@@ -19,5 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Mounting Routes
-    path('', include('main_app.urls'))
+    path('', include('main_app.urls')),
+    # Mounting on account route for auth
+    path('accounts/', include('django.contrib.auth.urls'))
 ]

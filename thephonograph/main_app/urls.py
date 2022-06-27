@@ -16,7 +16,8 @@ urlpatterns = [
 
 
     # # Add Track List
-    path('records/<int:record_id>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
+    path('records/<int:pk>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
 
-
+    # Signup Route/URL
+    path('accounts/signup/', views.signup, name='signup'),
 ]
