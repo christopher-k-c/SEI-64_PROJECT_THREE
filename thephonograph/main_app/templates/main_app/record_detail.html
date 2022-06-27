@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>The Record Detail</h1>
+
+<div>
+   Name: {{ record.name }}  
+</div>
+
+<a href="{% url 'records_update' record.id %}">Edit</a>
+<a href="{% url 'records_delete' record.id %}">Delete</a>
+
+
+{% endblock %}
+
+

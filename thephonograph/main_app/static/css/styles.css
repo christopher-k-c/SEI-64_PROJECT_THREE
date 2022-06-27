@@ -1,0 +1,60 @@
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.master-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
+    background-color: bisque;
+
+
+}
+
+
+
+
+/* Top Nav */
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.link-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* Bottom Nav */
+
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.create-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

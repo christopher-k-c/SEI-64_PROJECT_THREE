@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>The Record List</h1>
+
+{% for record in record_list %}
+
+
+<div>
+
+    <a href="{% url 'records_detail' record.id %}">
+   Name: {{ record.name }}  
+    </a>    
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
