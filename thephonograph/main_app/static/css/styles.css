@@ -58,3 +58,15 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+/* Record Details Page */
+
+.image-details-page {
+    width: 400px;
+}
+
+.record-info-container {
+
+    
+}

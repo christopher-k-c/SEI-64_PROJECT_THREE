@@ -17,6 +17,7 @@ class Record(models.Model):
     format = models.CharField(max_length=50)
     release_date = models.DateField()
     image = models.URLField(max_length=1000)
+    image_two = models.URLField(max_length=1000, blank=True, null=True)
     
     def __str__(self):
         return self.name
@@ -25,7 +26,7 @@ class Record(models.Model):
         return reverse('records_detail', kwargs={"pk": self.id})
 
 
-class TrackList(models.Model):
+class Tracklist(models.Model):
     track_name = models.CharField(max_length=100)
     track_duration =models.FloatField()
     record = models.ForeignKey(Record, on_delete=models.CASCADE)
