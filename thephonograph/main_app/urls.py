@@ -13,4 +13,10 @@ urlpatterns = [
     path('records/<int:pk>/delete', views.RecordDelete.as_view(), name='records_delete'),
 
 
+
+
+    # # Add Track List
+    path('records/<int:record_id>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
+
+
 ]

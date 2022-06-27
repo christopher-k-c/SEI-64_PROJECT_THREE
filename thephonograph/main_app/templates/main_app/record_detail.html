@@ -3,12 +3,74 @@
 {% block content %}
 <h1>The Record Detail</h1>
 
-<div>
-   Name: {{ record.name }}  
+
+
+
+
+<div class="record-info-container">
+    <div class="image-details-container">
+        <img class="image-details-page" src={{record.image}} >
+    </div>
+
+   <div class="record-details-container">
+        Name: {{ record.name }}  
+        Label: {{ record.label }}  
+        Genre: {{ record.genre }}  
+        Description: {{ record.description }}  
+        Format: {{ record.format }}  
+        Release Date: {{ record.release_date }}  
+    </div>  
+
 </div>
 
 <a href="{% url 'records_update' record.id %}">Edit</a>
 <a href="{% url 'records_delete' record.id %}">Delete</a>
+
+
+<div>
+
+    <form action="{% url 'add_tracklist' record.id %}" method="post">
+
+
+        {% csrf_token %}
+
+        {{ tracklist_form.as_p }}
+
+        
+
+        <input type="submit" value="Add Track">
+
+
+    </form>
+
+
+    <table>
+
+        <thead>
+
+
+            <tr>
+
+                <th>Track Name</th>
+                <th>Track Duration</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {% for tracklist in record.tracklist_set.all %}
+            <tr>
+                <td>{{tracklist.track_name }}</td>
+                <td>{{tracklist.track_duration }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+
+
+</div>
 
 
 {% endblock %}
