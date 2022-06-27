@@ -16,8 +16,7 @@ urlpatterns = [
 
 
     # # Add Track List
-    path('records/<int:record_id>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
-
+    path('records/<int:pk>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
 
 
     # Artists Display All
@@ -35,5 +34,8 @@ urlpatterns = [
     # Associate a Artist with Records (M:M)
  
 
+
+    # Signup Route/URL
+    path('accounts/signup/', views.signup, name='signup'),
 
 ]

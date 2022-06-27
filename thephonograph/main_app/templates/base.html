@@ -25,10 +25,15 @@
 
                     <div><a href="{% url 'home' %}">Home</a></div>
                     <div><a href="{% url 'about' %}">About</a></div>
-                    <div><a href="">Login</a></div>
-                    <div><a href="">Signup</a></div>
                     <div><a href="">Crate</a></div>
 
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+
+                    {% else %}
+                    <div><a href="{% url 'login' %}">Login</a></div>
+                    <div><a href="{% url 'signup' %}">Signup</a></div>
+                    {% endif %}
                 </div>
 
             </nav>
@@ -37,15 +42,17 @@
         <nav class="bottom-nav">
 
             <div class="bottom-link-container">
-                <div> <a href="{% url 'records_index' % }"> Records </a></div>
+              
+                <div><a href="{% url 'records_index' %}">Records</a></div>
                 <div> <a href="{% url 'artists_index' % }"> Artist </a></div>
                 <div> <a href=""> Label </a></div>
             </div>
 
             <div class="create-container">
+                {% if user.is_authenticated %}
                 <div><a href="{% url 'records_create' %}">Create Record</a></div>
                 <div><a href="">Add Artist</a></div>
-
+                {% endif %}
             </div>
         </nav>
 
