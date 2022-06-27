@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .forms import TracklistForm
-from .models import Record
+from .models import Artist, Record
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
@@ -16,6 +16,22 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+class ArtistList(ListView):
+    model = Artist
+
+class ArtistDetail(DetailView):
+    model = Artist
+
+# Need to add createView here
+
+class ArtistUpdate(UpdateView):
+    model = Artist 
+    fields = ['artist_name','artist_location']   
+
+class ArtistDelete(DeleteView):
+    model = Artist   
+    success_url = '/artists/'
+
 
 class RecordList(ListView):
     model = Record
@@ -23,22 +39,17 @@ class RecordList(ListView):
 class RecordDetail(DetailView):
     model = Record 
 
-
 class RecordCreate(CreateView):
     model = Record 
     field =  '__all__'
-
 
 class RecordUpdate(UpdateView):
     model = Record
     fields = '__all__'
 
-
 class RecordDelete(DeleteView):
     model = Record
     success_url = '/records/'
-
-
 
 def add_tracklist(request, record_id):
     form = TracklistForm(request.POST)

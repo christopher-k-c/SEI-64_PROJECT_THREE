@@ -6,6 +6,16 @@ from datetime import date
 
 # Create your models here.
 
+class Artist(models.Model):
+    artist_name = models.CharField(max_length=100)
+    artist_age = models.IntegerField(100)
+    artist_location = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.artist_name
+
+    def get_absolute_url(self):
+        return reverse('artists_detail', kwargs={"pk": self.id})
 
 
 
@@ -18,7 +28,8 @@ class Record(models.Model):
     release_date = models.DateField()
     image = models.URLField(max_length=1000)
     image_two = models.URLField(max_length=1000, blank=True, null=True)
-    
+    artists = models.ManyToManyField(Artist)
+
     def __str__(self):
         return self.name
     
@@ -30,3 +41,5 @@ class Tracklist(models.Model):
     track_name = models.CharField(max_length=100)
     track_duration =models.FloatField()
     record = models.ForeignKey(Record, on_delete=models.CASCADE)
+
+

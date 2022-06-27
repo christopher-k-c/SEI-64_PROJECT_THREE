@@ -19,4 +19,21 @@ urlpatterns = [
     path('records/<int:record_id>/add_tracklist/', views.add_tracklist, name='add_tracklist'),
 
 
+
+    # Artists Display All
+    path('artists/', views.ArtistList.as_view(), name = 'artists_index'),
+    # # Artist Display Detail 
+    path('artists/<int:pk>/', views.ArtistDetail.as_view(), name = 'artists_detail'),
+    # # Artist Creation 
+    # path('artists/create', views.ArtistCreate.as_view(), name = 'artists_create'),
+    # # Artist Update
+    path('artists/<int:pk>/update', views.ArtistUpdate.as_view(), name = 'artists_update'),
+    # # Artist Delete
+    path('artists/<int:pk>/delete', views.ArtistDelete.as_view(), name = 'artists_delete'),
+
+
+    # Associate a Artist with Records (M:M)
+ 
+
+
 ]
