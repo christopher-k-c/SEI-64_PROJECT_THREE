@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h1>Toy Details </h1>
+
+    <div>
+        <span>{{ artist.artist_name }}</span>
+        <span>{{ artist.artist_age }}</span>
+        <span>{{ artist.artist_location }}</span>
+    </div>
+
+     <div>
+        <a href="{% url 'artists_update' artist.id %}">Edit</a>
+        <a href="{% url 'artists_delete' artist.id %}">Delete</a>
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
