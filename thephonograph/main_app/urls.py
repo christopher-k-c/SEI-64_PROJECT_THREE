@@ -12,7 +12,12 @@ urlpatterns = [
     path('records/<int:pk>/update', views.RecordUpdate.as_view(), name='records_update'),
     path('records/<int:pk>/delete', views.RecordDelete.as_view(), name='records_delete'),
 
+    # Crate Model Related Paths
+    path('crates/<int:pk>/', views.CrateDetail.as_view(), name='crates_detail'),
 
+    # Associate & Un-associate a record with a Crate
+    path('records/<int:record_id>/assoc_record/', views.assoc_record, name='assoc_record'),
+    path('crates/<int:pk>/unassoc_record/<int:record_id>/', views.unassoc_record, name='unassoc_record'),
 
 
     # # Add Track List

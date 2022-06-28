@@ -2,7 +2,7 @@ from ast import For
 from django.shortcuts import render, redirect
 
 from .forms import TracklistForm
-from .models import Artist, Record
+from .models import Artist, Record, Crate
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
@@ -86,6 +86,22 @@ def add_tracklist(request, pk):
         new_tracklist.record_id = pk
         new_tracklist.save()
         return redirect('records_detail', pk = pk)
+
+# Crate Views
+class CrateDetail(LoginRequiredMixin, DetailView):
+    model = Crate
+
+# Associate & Un-associate a record with a Crate
+@login_required
+def assoc_record(request, record_id):
+    pk = request.user.id 
+    Crate.objects.get(id=pk).records.add(record_id)
+    return redirect('crates_detail', pk=pk)
+
+@login_required
+def unassoc_record(request, pk, record_id):
+    Crate.objects.get(id=pk).records.remove(record_id)
+    return redirect('crates_detail', pk=pk)
 
 
 def signup(request):

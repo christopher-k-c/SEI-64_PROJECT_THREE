@@ -3,9 +3,12 @@
 {% block content %}
 <h1>The Record Detail</h1>
 
-
-
-
+<div>
+    <form action="{% url 'assoc_record' record.id %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Add to Crate</button>
+    </form>
+  </div>
 
 <div class="record-info-container">
     <div class="image-details-container">

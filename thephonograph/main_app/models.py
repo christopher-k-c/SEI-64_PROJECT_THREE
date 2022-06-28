@@ -5,6 +5,7 @@ from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 
 class Artist(models.Model):
@@ -14,13 +15,11 @@ class Artist(models.Model):
     image = models.URLField(max_length=1000, blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 
-
     def __str__(self):
         return self.artist_name
 
     def get_absolute_url(self):
         return reverse('artists_detail', kwargs={"pk": self.id})
-
 
 
 class Record(models.Model):
@@ -42,6 +41,18 @@ class Record(models.Model):
         return reverse('records_detail', kwargs={"pk": self.id})
 
 
+class Crate(models.Model):
+    name = models.CharField(max_length=100)
+    records = models.ManyToManyField(Record)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('crates_detail', kwargs = {'pk': self.id})
+
+
 class Tracklist(models.Model):
     track_name = models.CharField(max_length=100)
     track_duration = models.FloatField()
@@ -49,5 +60,3 @@ class Tracklist(models.Model):
     
     def __str__(self):
         return self.track_name
-
-
