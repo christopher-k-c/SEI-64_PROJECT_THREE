@@ -17,6 +17,10 @@ import os
 
 from django.urls import reverse
 
+from django.contrib import messages
+
+
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -112,9 +116,12 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, "You have successfully signed up!" )
             return redirect('records_index')
         else:
-            error_message = 'Invalid Signup - Please try again later'
+            messages.error(request, "Your signup has not been successful, please try again." )
+            return redirect('signup')
+        
 
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
