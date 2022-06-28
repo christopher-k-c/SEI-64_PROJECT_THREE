@@ -38,11 +38,11 @@ class ArtistCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class ArtistUpdate(UpdateView):
+class ArtistUpdate(LoginRequiredMixin, UpdateView):
     model = Artist 
     fields = ['artist_name','artist_age','artist_location','image']   
 
-class ArtistDelete(DeleteView):
+class ArtistDelete(LoginRequiredMixin, DeleteView):
     model = Artist   
     success_url = '/artists/'
 
