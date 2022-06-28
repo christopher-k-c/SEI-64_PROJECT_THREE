@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -46,4 +46,5 @@ urlpatterns = [
     # Signup Route/URL
     path('accounts/signup/', views.signup, name='signup'),
 
+    path("password_reset", views.password_reset_request, name="password_reset"),
 ]
