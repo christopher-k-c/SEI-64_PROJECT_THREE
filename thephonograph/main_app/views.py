@@ -16,6 +16,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 import os
 
 from django.urls import reverse
+from django.contrib import messages
 
 # Imports for Password Reset
 from django.shortcuts import render, redirect
@@ -28,6 +29,7 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
+
 
 # Create your views here.
 def home(request):
@@ -124,9 +126,12 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, "You have successfully signed up!" )
             return redirect('records_index')
         else:
-            error_message = 'Invalid Signup - Please try again later'
+            messages.error(request, "Your signup has not been successful, please try again." )
+            return redirect('signup')
+        
 
     form = NewUserForm()
     context = {'form': form, 'error_message': error_message}
