@@ -30,11 +30,17 @@ class ArtistList(ListView):
 class ArtistDetail(DetailView):
     model = Artist
 
-# Need to add createView here
+class ArtistCreate(LoginRequiredMixin, CreateView):
+    model = Artist
+    fields = '__all__'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class ArtistUpdate(UpdateView):
     model = Artist 
-    fields = ['artist_name','artist_location']   
+    fields = ['artist_name','artist_age','artist_location','image']   
 
 class ArtistDelete(DeleteView):
     model = Artist   
@@ -97,3 +103,14 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
+
+@login_required
+def assoc_artist(request, record_id, artist_id):
+    # First select object then add a toy 
+    Record.objects.get(id=record_id).artist.add(artist_id)
+    return redirect('detail', record_id = record_id)
+@login_required
+def unassoc_artist(request, record_id, artist_id):
+    # Remove link from join table 
+    Record.objects.get(id=record_id).artist.remove(artist_id)
+    return redirect('detail', record_id = record_id)

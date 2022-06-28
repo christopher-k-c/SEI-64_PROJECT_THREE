@@ -10,16 +10,32 @@
 <div class="record-info-container">
     <div class="image-details-container">
         <img class="image-details-page" src={{record.image}} >
+        {% if record.image_two %}
+        <img class="image-details-page" src={{record.image_two}} >
+        {% endif %}
+
     </div>
 
 
    <div class="record-details-container">
-        <!-- Artists: {{ artist.artist_name }} -->
+        Artists: {{ artist.artist_name }}
+        <br>
+        <hr>
         Name: {{ record.name }}  
+        <br>
+        <hr>
         Label: {{ record.label }}  
+        <br>
+        <hr>
         Genre: {{ record.genre }}  
+        <br>
+        <hr>
         Description: {{ record.description }}  
+        <br>
+        <hr>
         Format: {{ record.format }}  
+        <br>
+        <hr>
         Release Date: {{ record.release_date }}  
     </div>  
 
@@ -37,6 +53,8 @@
         {% csrf_token %}
 
         {{ form.as_p }}
+
+
 
         
 
