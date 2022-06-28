@@ -20,3 +20,4 @@ class Migration(migrations.Migration):
             field=models.ManyToManyField(to='main_app.Artist'),
         ),
     ]
+
