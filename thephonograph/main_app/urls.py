@@ -20,19 +20,22 @@ urlpatterns = [
 
 
     # Artists Display All
-    path('artists/', views.ArtistList.as_view(), name = 'artists_index'),
+    path('artists/', views.ArtistList.as_view(), name='artists_index'),
     # # Artist Display Detail 
     path('artists/<int:pk>/', views.ArtistDetail.as_view(), name = 'artists_detail'),
     # # Artist Creation 
-    # path('artists/create', views.ArtistCreate.as_view(), name = 'artists_create'),
+    path('artists/create', views.ArtistCreate.as_view(), name = 'artists_create'),
     # # Artist Update
     path('artists/<int:pk>/update', views.ArtistUpdate.as_view(), name = 'artists_update'),
     # # Artist Delete
     path('artists/<int:pk>/delete', views.ArtistDelete.as_view(), name = 'artists_delete'),
 
 
-    # Associate a Artist with Records (M:M)
- 
+
+    # Associate and Unassociate an Artist with a Record (M:M)
+    path('records/<int:record_id>/assoc_artist/<int:artist_id>/', views.assoc_artist, name='assoc_artist'),
+    path('records/<int:record_id>/unassoc_artist/<int:artist_id>/', views.unassoc_artist, name='unassoc_artist'),
+
 
 
     # Signup Route/URL

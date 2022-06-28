@@ -1,20 +1,14 @@
 
-
-
-
-
-
-
-
 {% extends 'base.html' %}
 
 
 {% block content %}
 
 
-<h1>Toy Details </h1>
+<h1>Artist Details </h1>
 
     <div>
+        <img src="{{ artist.image }}" alt="">
         <span>{{ artist.artist_name }}</span>
         <span>{{ artist.artist_age }}</span>
         <span>{{ artist.artist_location }}</span>

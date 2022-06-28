@@ -9,8 +9,11 @@ from django.contrib.auth.models import User
 
 class Artist(models.Model):
     artist_name = models.CharField(max_length=100)
-    artist_age = models.IntegerField(100)
+    artist_age = models.IntegerField("Artist Age")
     artist_location = models.CharField(max_length=100)
+    image = models.URLField(max_length=1000, blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+
 
     def __str__(self):
         return self.artist_name
@@ -41,7 +44,10 @@ class Record(models.Model):
 
 class Tracklist(models.Model):
     track_name = models.CharField(max_length=100)
-    track_duration =models.FloatField()
+    track_duration = models.FloatField()
     record = models.ForeignKey(Record, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.track_name
 
 
