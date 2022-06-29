@@ -20,22 +20,22 @@
     <div class="font-mono master-content">
 
         <header>
-            <nav class="flex justify-between top-nav">
+            <nav class="flex justify-between top-nav h-12 items-center" style="background-color: white;">
 
                 <div class="logo"> Logo </div>
 
                 <div class="link-container">
 
-                    <div><a href="{% url 'home' %}">Home</a></div>
-                    <div><a href="{% url 'about' %}">About</a></div>
+                    <div><a href="{% url 'home' %}" class="mr-4">Home</a></div>
+                    <div><a href="{% url 'about' %}" class="mr-4">About</a></div>
 
                     {% if user.is_authenticated %}
-                    <div><a href="{% url 'get_crate' %}">Crate</a></div>
-                    <div><a href="{% url 'new_password_reset' %}">Change Password</a></div>
+                    <div><a href="{% url 'get_crate' %}" class="mr-4">Crate</a></div>
+                    <div><a href="{% url 'new_password_reset' %}" class="mr-4">Change Password</a></div>
                     <div><a href="{% url 'logout' %}">Logout</a></div>
 
                     {% else %}
-                    <div><a href="{% url 'login' %}">Login</a></div>
+                    <div><a href="{% url 'login' %} " class="mr-4">Login</a></div>
                     <div><a href="{% url 'signup' %}">Signup</a></div>
                     {% endif %}
                 </div>
@@ -43,20 +43,19 @@
             </nav>
         </header>
 
-        <nav class="bottom-nav">
+        <nav class="bottom-nav h-16 items-center" style="background-color: #524F4a; color: white;">
 
             <div class="bottom-link-container">
               
-                <div><a href="{% url 'records_index' %}">Records</a></div>
+                <div><a href="{% url 'records_index' %}" class="mr-4 ml-2">Records</a></div>
                 <div><a href="{% url 'artists_index' %}">Artist</a></div>
-                <div><a href=""> Label </a></div>
             </div>
 
             <div class="create-container">
                 {% if user.is_authenticated %}
                 
-                <div><a href="{% url 'records_create' %}">Create Record</a></div>
-                <div><a href="{% url 'artists_create' %}">Add Artist</a></div>
+                <div><a href="{% url 'records_create' %}" class="mr-4">Create Record</a></div>
+                <div><a href="{% url 'artists_create' %}" class="mr-2">Add Artist</a></div>
                 {% endif %}
             </div>
         </nav>
