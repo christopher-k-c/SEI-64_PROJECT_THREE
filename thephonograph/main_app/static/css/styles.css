@@ -70,3 +70,9 @@ body {
 
     
 }
+
+
+.artist-text {
+    font-size: 2vh;
+    font-weight: bold;
+}
