@@ -50,7 +50,7 @@
 
 <div>
 
-    <form action="{% url 'add_tracklist' record.id %}" method="post">
+    <form action="{% url 'add_tracklist' record.id %}" method="post" onSubmit="clearField();">
 
 
         {% csrf_token %}

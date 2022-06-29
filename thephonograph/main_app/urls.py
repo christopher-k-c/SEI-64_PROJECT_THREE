@@ -14,6 +14,11 @@ urlpatterns = [
 
     # Crate Model Related Paths
     path('crates/<int:pk>/', views.CrateDetail.as_view(), name='crates_detail'),
+    path('crates/create/', views.CrateCreate.as_view(), name='crates_create'),
+    path('crates/<int:pk>/update', views.CrateUpdate.as_view(), name='crates_update'),
+    path('crates/get_crate', views.get_crate, name='get_crate'),
+
+
 
     # Associate & Un-associate a record with a Crate
     path('records/<int:record_id>/assoc_record/', views.assoc_record, name='assoc_record'),
@@ -46,7 +51,7 @@ urlpatterns = [
     # Signup Route/URL
     path('accounts/signup/', views.signup, name='signup'),
 
-    path("password_reset", views.password_reset_request, name="password_reset"),
+    path("password_reset/", views.password_reset_request, name="new_password_reset"),
 
 
 
