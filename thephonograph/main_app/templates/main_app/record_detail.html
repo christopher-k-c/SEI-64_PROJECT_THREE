@@ -9,9 +9,9 @@
       <button type="submit">Add to Crate</button>
     </form>
   </div>
-
-<div class="record-info-container">
-    <div class="image-details-container">
+<!-- flex justify-between -->
+<div class="grid grid-cols-2 record-info-container" >
+    <div class=" image-details-container">
         <img class="image-details-page" src={{record.image}} >
         {% if record.image_two %}
         <img class="image-details-page" src={{record.image_two}} >
@@ -19,14 +19,13 @@
 
     </div>
 
-
-
     <div class="record-details-container">
-        Artists: {%for artist in record.artists.all %}
+        <span class="artist-text">Artists: {% for artist in record.artists.all %}
 
-        {{artist.artist_name }}
+        {{artist.artist_name}}
     
         {% endfor %}
+        </span> 
         <br>
         <hr>
         Name: {{ record.name }}  
@@ -35,67 +34,80 @@
         Label: {{ record.label }}  
         <br>
         <hr>
-        Genre: {{ record.genre }}  
-        <br>
-        <hr>
-        Description: {{ record.description }}  
+        Genre: {{ record.genre }}   
         <br>
         <hr>
         Format: {{ record.format }}  
         <br>
         <hr>
-        Release Date: {{ record.release_date }}  
+        Release Date: {{ record.release_date }}
+        <br>
+        <hr>
+        <a class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="{% url 'records_update' record.id %}">Edit Record Details</a>
+        <a class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"href="{% url 'records_delete' record.id %}">Delete Record</a>  
+
+
+
+        <br>
+
+        <div class="description">
+            <br>
+            <hr>
+            Description: {{ record.description }}  
+            <br>
+            <hr>
+        </div>
+
+        <br>
+
+        <div>
+
+            <form action="{% url 'add_tracklist' record.id %}" method="post" onSubmit="clearField();">
+        
+        
+                {% csrf_token %}
+        
+                {{ form.as_p }}
+        
+        
+        
+                
+        
+                <input class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" type="submit" value="Add Track">
+        
+        
+            </form>
+        
+        
+            <table>
+        
+                <thead>
+        
+        
+                    <tr>
+        
+                        <th>Track Name</th>
+                        <th>Track Duration</th>
+                    </tr>
+                </thead>
+        
+        
+                <tbody>
+                    {% for tracklist in record.tracklist_set.all %}
+                    <tr>
+                        <td>{{tracklist.track_name }}</td>
+                        <td>{{tracklist.track_duration }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+        
+        
+            </table>
+        
+        
+        </div>
     </div>  
 
-</div>
-
-<a href="{% url 'records_update' record.id %}">Edit</a>
-<a href="{% url 'records_delete' record.id %}">Delete</a>
-
-
-<div>
-
-    <form action="{% url 'add_tracklist' record.id %}" method="post" onSubmit="clearField();">
-
-
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-
-
-        
-
-        <input type="submit" value="Add Track">
-
-
-    </form>
-
-
-    <table>
-
-        <thead>
-
-
-            <tr>
-
-                <th>Track Name</th>
-                <th>Track Duration</th>
-            </tr>
-        </thead>
-
-
-        <tbody>
-            {% for tracklist in record.tracklist_set.all %}
-            <tr>
-                <td>{{tracklist.track_name }}</td>
-                <td>{{tracklist.track_duration }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-
-
-    </table>
 
 
 </div>
