@@ -20,8 +20,13 @@
     </div>
 
 
-   <div class="record-details-container">
-        Artists: {{ artist.artist_name }}
+
+    <div class="record-details-container">
+        Artists: {%for artist in record.artists.all %}
+
+        {{artist.artist_name }}
+    
+        {% endfor %}
         <br>
         <hr>
         Name: {{ record.name }}  

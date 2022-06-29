@@ -58,11 +58,16 @@ class ArtistCreate(LoginRequiredMixin, CreateView):
         messages.success(self.request, "You have added a Artist to the database!" )
         return super().form_valid(form)
 
+
+
+    
+
 class ArtistUpdate(LoginRequiredMixin, UpdateView):
     model = Artist 
     fields = ['artist_name','artist_age','artist_location','image']
-
+    
     def form_valid(self, form):
+        
         form.instance.user = self.request.user
         messages.success(self.request, "You have successfully updated the Artist!" )
         return super().form_valid(form)
@@ -101,6 +106,8 @@ class RecordCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         messages.success(self.request, "You have added a Record to the database!" )
         return super().form_valid(form)
+
+
 
 class RecordUpdate(LoginRequiredMixin, UpdateView):
     model = Record
@@ -221,5 +228,3 @@ def password_reset_request(request):
 #         return super().form_valid(form)  
     
 
-
- 
