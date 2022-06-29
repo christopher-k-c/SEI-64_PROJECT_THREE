@@ -1,12 +1,21 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>The Record List</h1>
 
-
+<div class="flex flex-wrap justify-center" style="background-color: #E5E3D7;">
 {% for record in record_list %}
 
-<div>
-  <a href="{% url 'records_detail' record.id %}"> Name: {{ record.name }} </a>
+<div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3">
+  <a href="{% url 'records_detail' record.id %}"> <img src="{{ record.image }}" alt=""></a>
+  <div class="h-20 flex items-center justify-items-center" style="background-color: white;">
+    <p class="ml-1 mr-1 mt-1 mb-1">{{ record.name }} by {% for artist in record.artists.all %}
+
+    {{artist.artist_name}}
+
+    {% endfor %}</p>
+  </div>
 </div>
 
-{% endfor %} {% endblock %}
+{% endfor %} 
+</div>
+
+{% endblock %}
