@@ -16,6 +16,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 import os
 
 from django.urls import reverse
+# Imports for Messages
 from django.contrib import messages
 
 # Imports for Password Reset
@@ -29,6 +30,9 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
+
+# Imports for LoginView
+# from django.contrib.auth.views import LoginView    
 
 
 # Create your views here.
@@ -50,15 +54,31 @@ class ArtistCreate(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        # instead of request, "Success message" it is self.request, "success etc"
+        messages.success(self.request, "You have added a Artist to the database!" )
         return super().form_valid(form)
 
 class ArtistUpdate(LoginRequiredMixin, UpdateView):
     model = Artist 
-    fields = ['artist_name','artist_age','artist_location','image']   
+    fields = ['artist_name','artist_age','artist_location','image']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, "You have successfully updated the Artist!" )
+        return super().form_valid(form)
+
+    
 
 class ArtistDelete(LoginRequiredMixin, DeleteView):
     model = Artist   
     success_url = '/artists/'
+    success_message = "You have successfully removed a Artist from the database!"
+   
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(ArtistDelete, self).delete(request, *args, **kwargs)
+
+
 
 
 class RecordList(ListView):
@@ -79,16 +99,27 @@ class RecordCreate(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        messages.success(self.request, "You have added a Record to the database!" )
         return super().form_valid(form)
 
 class RecordUpdate(LoginRequiredMixin, UpdateView):
     model = Record
     fields = '__all__'
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, "You have successfully updated the Record!" )
+        return super().form_valid(form)    
+
 
 class RecordDelete(LoginRequiredMixin, DeleteView):
     model = Record
     success_url = '/records/'
+    success_message = "You have successfully removed a Record from the database!"
+   
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(RecordDelete, self).delete(request, *args, **kwargs)
 
 
 @login_required
@@ -178,3 +209,17 @@ def password_reset_request(request):
 					return redirect ("/password_reset/done/")
 	password_reset_form = PasswordResetForm()
 	return render(request=request, template_name="main_app/password/password_reset.html", context={"password_reset_form":password_reset_form})
+
+
+
+# NOT WORKING
+# class AdminLogin(LoginView):
+#     template_name = 'login.html'
+
+#     def form_valid(self, form):
+#         messages.success(self.request, "You have logged in")
+#         return super().form_valid(form)  
+    
+
+
+ 

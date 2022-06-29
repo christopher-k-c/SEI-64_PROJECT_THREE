@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-
 class Artist(models.Model):
     artist_name = models.CharField(max_length=100)
     artist_age = models.IntegerField("Artist Age")
@@ -20,7 +19,6 @@ class Artist(models.Model):
 
     def get_absolute_url(self):
         return reverse('artists_detail', kwargs={"pk": self.id})
-
 
 class Record(models.Model):
     name = models.CharField(max_length=100)
