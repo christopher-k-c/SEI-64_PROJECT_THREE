@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -47,4 +47,10 @@ urlpatterns = [
     path('accounts/signup/', views.signup, name='signup'),
 
     path("password_reset", views.password_reset_request, name="password_reset"),
+
+
+
+    # loginview
+    # path('login/', views.AdminLogin.as_view(), name="login")
+
 ]

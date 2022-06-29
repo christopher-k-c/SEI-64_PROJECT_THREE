@@ -14,8 +14,7 @@
 </head>
 <body>
 
-    {% include 'main/includes/messages.html' %}
-    
+
     <div class="master-content">
 
         <header>
@@ -62,6 +61,9 @@
 
 
         <main>
+            <div class="message-container">
+                {% include 'main/includes/messages.html' %}
+            </div>
             {% block content %}
 
     
@@ -71,5 +73,11 @@
 
     
     </div>  
+    <script>
+        setTimeout(() => {
+            const alertBox = document.getElementById('alert');
+            alertBox.style.display = 'none';
+        }, 3000); 
+    </script>
 </body>
 </html>
