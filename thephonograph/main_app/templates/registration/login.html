@@ -5,7 +5,7 @@
 
 
 
-<form action="{% url 'login' %}" method="post">
+<form action="{% url 'login' %}" method="post" onSubmit="clearField();">
     {% csrf_token %}
 
     {{ form.as_p }}

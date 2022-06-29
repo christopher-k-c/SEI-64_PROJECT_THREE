@@ -1,10 +1,10 @@
 from cProfile import label
-from pickle import FALSE
-from tkinter import CASCADE
+from tkinter import CASCADE 
 from django.db import models
 from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
+from pkg_resources import require
 
 
 # Create your models here.

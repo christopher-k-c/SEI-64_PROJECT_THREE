@@ -108,7 +108,6 @@ class RecordCreate(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-
 class RecordUpdate(LoginRequiredMixin, UpdateView):
     model = Record
     fields = '__all__'
@@ -142,6 +141,20 @@ def add_tracklist(request, pk):
 # Crate Views
 class CrateDetail(LoginRequiredMixin, DetailView):
     model = Crate
+
+
+class CrateCreate(LoginRequiredMixin, CreateView):
+    model = Crate
+    fields = ['name', 'records']
+
+class CrateUpdate(LoginRequiredMixin, UpdateView):
+    model = Crate
+    fields = ['name', 'records']
+
+@login_required
+def get_crate(request):
+    pk = request.user.id
+    return redirect('crates_detail', pk=pk)
 
 # Associate & Un-associate a record with a Crate
 @login_required

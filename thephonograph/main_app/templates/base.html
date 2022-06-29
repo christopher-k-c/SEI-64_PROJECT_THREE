@@ -26,9 +26,10 @@
 
                     <div><a href="{% url 'home' %}">Home</a></div>
                     <div><a href="{% url 'about' %}">About</a></div>
-                    <div><a href="">Crate</a></div>
 
                     {% if user.is_authenticated %}
+                    <div><a href="{% url 'get_crate' %}">Crate</a></div>
+                    <div><a href="{% url 'new_password_reset' %}">Change Password</a></div>
                     <div><a href="{% url 'logout' %}">Logout</a></div>
 
                     {% else %}
