@@ -4,16 +4,30 @@
 
 <h1> Artist List</h1>
 
+<div class="flex flex-wrap justify-center">
+
+
 {% for artist in artist_list %}
 
-<a href="{% url 'artists_detail' artist.id%}">
-    <div>
-        <span>{{ artist.artist_name }}</span>
-        <span>{{ artist.artist_age }}</span>
-        <span>{{ artist.artist_location }}</span>
+
+
+    
+
+    <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3" style="background-color: #524F4a;">
+        <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto " width="250px"></a>
+        
+        <div class="container h-20 flex items-center justify-items-center">
+            <div>{{ artist.artist_name }}</div>
+        <div>{{ artist.artist_age }}</div>
+        <div>{{ artist.artist_location }}</div>
+        </div>
     </div>
+
 </a>
+
+
 
 {% endfor %}
 
+</div>
 {% endblock %}
