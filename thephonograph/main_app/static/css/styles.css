@@ -7,14 +7,17 @@ body {
     justify-content: center;
 
 
+
 }
 
 .master-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     width: 1000px;
     background-color: bisque;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+
 
 
 }
@@ -76,3 +79,6 @@ body {
     font-size: 2vh;
     font-weight: bold;
 }
+
+
+
