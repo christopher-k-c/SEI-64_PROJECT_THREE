@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>The Record Detail</h1>
 
 <div>
     <form action="{% url 'assoc_record' record.id %}" method="post">
       {% csrf_token %}
-      <button type="submit">Add to Crate</button>
+      <button class=" ml-2 mt-2 bg-blue-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4  border-yellow-700 hover: border-amber-400 rounded" style="background-color: #524F4a" type="submit">Add to Crate</button>
+
     </form>
+
   </div>
 <!-- flex justify-between -->
-<div class="grid grid-cols-2 record-info-container" >
+<div class="grid aspect-auto grid-cols-2 record-info-container" >
     <div class="aspect-auto image-details-container pl-2 pt-2">
         <img class="image-details-page" src={{record.image}} >
         {% if record.image_two %}

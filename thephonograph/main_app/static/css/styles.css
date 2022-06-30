@@ -1,7 +1,6 @@
 
 
 
-
 body {
     display: flex;
     justify-content: center;
@@ -12,8 +11,7 @@ body {
 
 .master-content {
 
-    width: 1000px;
-
+    width: 1300px;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -69,11 +67,6 @@ body {
     width: 400px;
 }
 
-.record-info-container {
-
-    
-}
-
 
 .artist-text {
     font-size: 2vh;
@@ -85,3 +78,127 @@ body {
     border-left: 2px solid #524f4a;
     height: 500px;
   }
+
+
+/* Records Index */
+
+
+
+.record-name {
+    
+    display: block;
+    font-weight: bold;
+
+}
+
+.record-artist {
+    font-style: italic;
+}
+
+/* Artists Index */
+
+.artist-name {
+    font-weight: bold;
+}
+
+.artist-location {
+    display: block;
+    font-style: italic;
+
+}
+
+/* Create Record */
+
+.form-container {
+    margin-top: 30px;
+}
+
+.form-container > .record-form > h1 {
+    color: #212529;
+    padding-bottom: 30px;
+    font-size: 2vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    /* Effecting Artist Form as well */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.record-form {
+    background-color: #A6A998;
+    padding: 30px;
+}
+
+.record-form > table > tbody > tr > td > input {
+    color: #C09984;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px
+
+}
+
+.record-form > table > tbody > tr > td > textarea {
+    color: #C09984;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px
+
+}
+
+.record-form > table > tbody > tr > td > select {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.record-form > input {
+    width: 100%;
+
+}
+
+/* Create Artist */
+
+
+.artist-form {
+    background-color: #A6A998;
+    padding: 30px;
+}
+
+.artist-form > table > tbody > tr > td > input {
+    color: #C09984;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px
+
+}
+
+.artist-form > table > tbody > tr > td > textarea {
+    color: #C09984;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px
+
+}
+
+
+.artist-form > table > tbody > tr > td > select {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.artist-form > input {
+    width: 100%;
+
+}
+
+.form-container > .artist-form > h1 {
+    color: #212529;
+    padding-bottom: 30px;
+    font-size: 2vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}

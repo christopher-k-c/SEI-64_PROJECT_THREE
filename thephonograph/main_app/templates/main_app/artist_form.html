@@ -2,25 +2,35 @@
 
 {% block content %}
 
-{% if object %}
-    <h1>Edit <span>{{ object.name }}</span></h1>
-{% else%}
-    <h1>Add Artists</h1>
-{% endif %}
-
-<form action="" method="post" onSubmit="clearField();">
 
 
-    {% csrf_token %}
 
-    <table>
-        {{form.as_table}}
-        
-    </table>
+<div class="form-container">
 
-    <input type="submit" value="submit" class="btn">
-
-</form>
+    <form class="artist-form" action="" method="post" onSubmit="clearField();">
 
 
-{% endblock %}
+        {% csrf_token %}
+
+        <table>
+
+            {% if object %}
+                <h1>Edit <span>{{ object.name }}</span></h1>
+            {% else%}
+                <h1>Add Artist</h1>
+            {% endif %}
+
+
+            {{form.as_table}}
+            
+        </table>
+
+        <input type="submit" value="submit" class=" btn bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+
+    </form>
+
+
+
+    {% endblock %}
+
+</div>
