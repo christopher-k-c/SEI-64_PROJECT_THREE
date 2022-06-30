@@ -1,6 +1,6 @@
 ![General Assembly's Logo](https://camo.githubusercontent.com/603ef5eae7d28900a9678ae96c6c60a9c72f8a059c328b28cf978df999cea1f8/68747470733a2f2f692e696d6775722e636f6d2f6c7a56493364382e706e67)
 
-# The Phonograph - A Collection of Vinyl Records
+# The Phonograph - A Collection of Records
 
 ## Overview
 Screenshot of the App here
@@ -33,11 +33,13 @@ The focus for the first day was mainly to create the starting code for this proj
 
 ###### Trello
 ![Trello board screenshot picture](/thephonograph/main_app/static/images/Trello%20Screenshot.png)
+[Trello Board](https://trello.com/b/NnHgZg5d/project-03)
 ###### ERD (Entity Relationship Diagrams)
 ![ERDs screenshot](/thephonograph/main_app/static/images/ERDs%20Screenshot.png)
 ###### Wireframes
 ![Figma screenshot](/thephonograph/main_app/static/images/Figma%20Screenshot.png)
 ###### User Stories
+![User Stories](/thephonograph/main_app/static/images/User%20Stories.png)
 
 ##### Day 2
 During the second day, part of the time was dedicate to edit the sign-up form allowing the User to also input first name, last name and email address alongside the standard username and password. The functionality to allow the User to reset the password was also implemented. Two additional Models were created (Artist and Crate). The User was now allowed to add the favorite Records to its own Crate. The links-display has been amended, now a logged-in User can see and access several more pages compared to a non-logged-in User.
@@ -47,10 +49,21 @@ Several bugs were fixed during the third day, starting from the one that was pre
 
 During the afternoon part of the Team started working on the styling for the application and the other part of the time started working on the readme file. 
 
+##### Day 4
+The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
+
 ### Deployed application link
-
+[The Phonograph](https://thephonographsei64.herokuapp.com/)
 ### Challenges
-
+As a Team we did find it challenging to fully understand what happens in the background with the CBVs, as the code is a lot shorter and less obvious than express, it's not always immediate to fully comprehend and subsequently work with the code. We did struggle understanding how to pull the data from models that were linked by relationships and show it on the page (eg. how to display the Artist name from the Record page considering that the relationship was a many to many). We decided to implement a CSS Library that we did not use during the lectures before, Tailwind, and does take time and understanding to be able to fully make the best out of these kind of features. When debugging we did run a vast amount of Google searches and the answers that we get from the web are not always the easiest to understand/implement due to the wide amount of different ways in which developers work, especially based on their experience. 
 
 ### Features to be added in the future
 - The password reset email only gets sent to the Terminal at the moment, the link fully works and the functionality fully works, but it would be good to have it as an actual sent email instead. As well, we could implement a verification email to be sent upon registration of a new User.
+- Implement on the homepage a carousel showing the latest record that have been added to the database.
+- Different levels of privileges based on the User type. 
+- User profile page.
+- Make the app fully responsive.
+- Install Tailwind with the config file, rather than just import it via the link, to fully explore how to personalize it.
+- Embed Youtube video related to Artist/Record on the detail pages.
+- Utilize a third party API, in this case Discogs API and include pagination. 
+- Create a Label model that behaves in a similar way to the Artist model.
