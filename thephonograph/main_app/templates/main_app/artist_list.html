@@ -10,13 +10,15 @@
     {% for artist in artist_list %}
 
         <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3" style="background-color: white">
+
+
             <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto"></a>
             
-            <div class="container h-20 flex items-center justify-items-center">
+            <div class="container pt-2 h-20 items-center justify-items-center">
 
-                <div class="artist-name">{{ artist.artist_name }}</div>
+                <span class="artist-name block">{{ artist.artist_name }}</span>
                 
-                <div class="artist-location">{{ artist.artist_location }}</div>
+                <span class="artist-location block">{{ artist.artist_location }}</span>
 
             </div>
         </div>

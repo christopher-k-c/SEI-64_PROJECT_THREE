@@ -99,6 +99,7 @@ body {
 
 .artist-name {
     font-weight: bold;
+    display: block;
 }
 
 .artist-location {
@@ -202,3 +203,119 @@ body {
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+/* Home Page  */
+
+
+.home-page-body {
+
+    display: grid;
+    
+}
+
+.slider {
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;  /* <===  */
+   
+  }
+
+.slide {
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #212529;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+
+
+.box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+
+}
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 400px;
+    width: 400px;
+    background-color: #524f4a;
+
+    margin: 10px;
+
+
+
+  }
+
+  .box > img {
+    display: flex;
+    margin: 0;
+    opacity: 0.2;
+  }
+
+  .box > .text {
+    position: absolute;
+    color: #d6af9a;
+    font-weight: bold;
+    font-size: 35px;
+  }

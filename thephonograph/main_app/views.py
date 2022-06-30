@@ -35,7 +35,6 @@ from django.utils.encoding import force_bytes
 # from django.contrib.auth.views import LoginView    
 
 
-# Create your views here.
 def home(request):
     crateInfo = Crate.objects.all()
     return render(request, 'home.html', {'crateInfo': crateInfo})
