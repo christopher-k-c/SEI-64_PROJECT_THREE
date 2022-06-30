@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>{{ crate.name }}</h1>
+
+{% for record in crate.records.all %}
+
+<div class="record-container">
+  <div>{{ record.name }}</div>
+  <div>
+    <form action="{% url 'unassoc_record' crate.id record.id %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Remove</button>
+    </form>
+  </div>
+</div>
+
+{% endfor %} {% endblock %}
