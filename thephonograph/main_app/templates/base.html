@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <title>The Phonograph</title>
   </head>
   <body>
@@ -35,6 +36,7 @@
               <a href="{% url 'new_password_reset' %}" class="mr-4"
                 >Change Password</a
               >
+
             </div>
             <div><a href="{% url 'logout' %}">Logout</a></div>
 
@@ -54,7 +56,7 @@
           <div>
             <a href="{% url 'records_index' %}" class="mr-4 ml-2">Records</a>
           </div>
-          <div><a href="{% url 'artists_index' %}">Artist</a></div>
+          <div><a href="{% url 'artists_index' %}">Artists</a></div>
         </div>
 
         <div class="create-container">

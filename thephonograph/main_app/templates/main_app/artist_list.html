@@ -2,32 +2,28 @@
 
 {% block content %}
 
-<h1> Artist List</h1>
+
 
 <div class="flex flex-wrap justify-center">
 
 
-{% for artist in artist_list %}
+    {% for artist in artist_list %}
 
+        <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3" style="background-color: white">
+            <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto"></a>
+            
+            <div class="container h-20 flex items-center justify-items-center">
 
+                <div class="artist-name">{{ artist.artist_name }}</div>
+                
+                <div class="artist-location">{{ artist.artist_location }}</div>
 
-    
-
-    <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3" style="background-color: #524F4a;">
-        <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto " width="250px"></a>
-        
-        <div class="container h-20 flex items-center justify-items-center">
-            <div>{{ artist.artist_name }}</div>
-        <div>{{ artist.artist_age }}</div>
-        <div>{{ artist.artist_location }}</div>
+            </div>
         </div>
-    </div>
 
-</a>
+    </a>
 
-
-
-{% endfor %}
+    {% endfor %}
 
 </div>
 {% endblock %}
