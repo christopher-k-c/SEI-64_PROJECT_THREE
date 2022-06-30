@@ -37,7 +37,8 @@ from django.utils.encoding import force_bytes
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    crateInfo = Crate.objects.all()
+    return render(request, 'home.html', {'crateInfo': crateInfo})
 
 def about(request):
     return render(request, 'about.html')

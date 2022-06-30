@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% for crate in crateInfo %}
+{{ crate.user }}
+{% endfor %}
+
+if logged in user id matches crate.user id 
+
 {% endblock %}
