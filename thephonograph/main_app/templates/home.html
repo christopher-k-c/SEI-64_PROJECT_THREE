@@ -11,17 +11,29 @@
 
         <div class="slide">
             <!-- slide 1 -->
+            <div class="type-container">
+                <div class="slide-one-artist">Ploy</div>
+                <div class="slide-one-record">Unit 18 Vol 5</div>
+            </div>
             <img class="imagey" src="{% static 'main_app/media/5056321674364_T4_Image.jpg' %}">
-            <div></div>
+            
         </div>
 
         <div class="slide">
             <!-- slide 1 -->
+            <div class="type-container">
+                <div class="slide-two-artist">Sun Ra</div>
+                <div class="slide-two-record">Nuits de la Fondation Maeght, Vol. 2</div>
+            </div>
             <img class="imagey" src="{% static 'main_app/media/0048285722316.jpg' %}">
         </div>
 
         <div class="slide">
             <!-- slide 1 -->
+            <div class="type-container">
+                <div class="slide-three-artist">Batu</div>
+                <div class="slide-three-record">Opal</div>
+            </div>
             <img class="imagey" src="{% static 'main_app/media/5050580779112.jpg' %}">
         </div>
 
@@ -34,34 +46,49 @@
 
 
     <div class="box-container">
-        <!-- Artist -->
-        <div class="box">
-            <img class="imagey" src="{% static 'main_app/media/Digital-Cover-GMT52.jpg' %}">
-            <div class="text">Artist</div>
-        </div>
-        <!-- Create Crate -->
-        <div class="box">
-            <img class="imagey" src="{% static 'main_app/media/5050580779112.jpg' %}">
-            <div class="text">Create Crate</div>
-        </div>
+        <a href="{% url 'artists_index' %}">
+            <!-- Artist -->
+            <div class="box">
+                <img class="imagey" src="{% static 'main_app/media/Digital-Cover-GMT52.jpg' %}">
+                <div class="text">Artist</div>
+            </div>
+        </a>
+        
+            <!-- Create Crate -->
+            <div class="box">
 
-        <!-- Records
-
-
+            
+                <img class="imagey" src="{% static 'main_app/media/5050580779112.jpg' %}">
             {% for crate in crateInfo %}
-            {{ crate.user }}
-            {% endfor %} -->
-
-
-        <div class="box">
-            <img class="imagey" src="{% static 'main_app/media/original.jpg' %}">
-            <div class="text">Records</div>
-
-
-        </div>
+             {% if user.id == crate.user.id %}
+                <a class="text" href="{% url 'get_crate' %}">View Your Crate</a>
+               {% else %}
+                <a class="text" href="{% url 'crates_create' %}">Create A Crate</a>
+             {% endif %}
+             {% endfor %} 
+            </div>
+       
+        <a href="{% url 'records_index' %}">
+            <div class="box">
+                <img class="imagey" src="{% static 'main_app/media/original.jpg' %}">
+                <div class="text">Records</div>
+                
+                
+                    
+               
+            </div>
+        </a>
 
 
     </div>  
+    <div class="divider">
+
+       
+
+
+
+    </div>
+
 
 
 

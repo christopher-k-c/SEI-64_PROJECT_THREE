@@ -148,6 +148,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # For Password Reset
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-import django_heroku
-django_heroku.settings(locals())

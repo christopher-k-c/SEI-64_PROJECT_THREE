@@ -57,15 +57,6 @@ urlpatterns = [
     path("password_reset/", views.password_reset_request, name="new_password_reset"),
 
 
-    # User
-
-
-
-
-
-    # loginview
-    # path('login/', views.AdminLogin.as_view(), name="login")
-
 ]
 
 urlpatterns += staticfiles_urlpatterns()
