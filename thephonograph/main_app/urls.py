@@ -43,8 +43,6 @@ urlpatterns = [
     # # Artist Delete
     path('artists/<int:pk>/delete', views.ArtistDelete.as_view(), name = 'artists_delete'),
 
-
-
     # Associate and Unassociate an Artist with a Record (M:M)
     path('records/<int:record_id>/assoc_artist/<int:artist_id>/', views.assoc_artist, name='assoc_artist'),
     path('records/<int:record_id>/unassoc_artist/<int:artist_id>/', views.unassoc_artist, name='unassoc_artist'),

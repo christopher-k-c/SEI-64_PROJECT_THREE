@@ -4,17 +4,17 @@
 
 
 
-<div class="flex flex-wrap justify-center">
+<div class="flex flex-wrap justify-center object-cover">
 
 
     {% for artist in artist_list %}
 
-        <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3" style="background-color: white">
+        <div class="h-25 w-25 ml-3 mr-3 mt-3 mb-3 object-cover" style="background-color: white">
 
 
-            <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto"></a>
+            <a href="{% url 'artists_detail' artist.id%}"><img src="{{artist.image}}" class="aspect-auto object-cover"></a>
             
-            <div class="container pt-2 h-20 items-center justify-items-center">
+            <div class="container pt-2 h-20 items-center justify-items-center object-cover">
 
                 <span class="artist-name block">{{ artist.artist_name }}</span>
                 
