@@ -3,7 +3,8 @@
 # The Phonograph - A Collection of Records
 
 ## Overview
-Screenshot of the App here
+![App home page screenshot](/thephonograph/main_app/static/images/Homepage%20Screenshot.png)
+![Record detail page screenshot](/thephonograph/main_app/static/images/Record%20Detail%20Screenshot.png)
 
 
 ### Requirements
