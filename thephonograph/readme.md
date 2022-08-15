@@ -60,7 +60,7 @@ During the afternoon part of the Team started working on the styling for the app
 The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
 
 
-![Messaging](/thephonograph/main_app/static/images/messaging.png)
+![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
 
 ### Deployed application link
 [The Phonograph](https://thephonographsei64.herokuapp.com/)
