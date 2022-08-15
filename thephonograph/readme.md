@@ -83,6 +83,7 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 > Messaging Example
 
 - One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
+- However, It is my understanding that i have incorrectly implemented it. In this instance i have hardcoded the type of alert to the class rather than using the {{message.tags}} which has access to the following tags **debug, info, success, warning and error.** In the future i will refactor this code to be dynamic.
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
 
