@@ -59,6 +59,9 @@ During the afternoon part of the Team started working on the styling for the app
 ##### Day 4
 The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
 
+
+![Messaging](/thephonograph/main_app/static/images/messaging.png)
+
 ### Deployed application link
 [The Phonograph](https://thephonographsei64.herokuapp.com/)
 ### Challenges
