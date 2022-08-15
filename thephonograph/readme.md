@@ -77,6 +77,9 @@ This last bit of javascript removes the alert messages after 3 seconds using the
 This block of code is from a tutroial I followed that produces a image carousel on our landing page. The javascript works as follows...
 ![Carousel](/thephonograph/main_app/static/images/carousel.png)
 
+
+![Sign_up_messaging](/thephonograph/main_app/static/images/signup.gif)
+
 ### Deployed application link
 [The Phonograph](https://hydro-keener-88414.herokuapp.com/)
 ### Challenges
