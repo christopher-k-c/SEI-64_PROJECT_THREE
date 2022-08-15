@@ -63,7 +63,7 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 ![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
 
 ### Deployed application link
-[The Phonograph](https://thephonographsei64.herokuapp.com/)
+[The Phonograph](https://hydro-keener-88414.herokuapp.com/)
 ### Challenges
 As a Team we did find it challenging to fully understand what happens in the background with the CBVs, as the code is a lot shorter and less obvious than express, it's not always immediate to fully comprehend and subsequently work with the code. We did struggle understanding how to pull the data from models that were linked by relationships and show it on the page (eg. how to display the Artist name from the Record page considering that the relationship was a many to many). We decided to implement a CSS Library that we did not use during the lectures before, Tailwind, and does take time and understanding to be able to fully make the best out of these kind of features. When debugging we did run a vast amount of Google searches and the answers that we get from the web are not always the easiest to understand/implement due to the wide amount of different ways in which developers work, especially based on their experience. 
 
