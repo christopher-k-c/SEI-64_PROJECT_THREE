@@ -63,17 +63,8 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 ### Examples of my contributions 
 
-One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
+>* Carousel Example*
 
-![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
-
-This piece can be found inside the base.html template which is a HTML skeleton document that is replicated across the site on every page but only written once, it contains various elements, the most important of which, are the Navigation and footer bars - saving us from having to re-write these ubiquitous elements for every page on our site.
-
-![Messaging](/thephonograph/main_app/static/images/messaging_03.png)
-
-This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
-
-![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
 
 Because the slides variable is an array of three html elements I can use a forEach loop to iterate over the array. For each iteration we are setting transforms property translateX, a css function, to the sum of the current slides index value multiplied by 100% and then repeating until the each element within the slides array has been set a translateX percentage value. 
@@ -88,15 +79,32 @@ We do the same as above for the previous button but it's just the reverse.
 
 ![Carousel](/thephonograph/main_app/static/images/carousel.png)
 
+>* Messaging Example*
+
+One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
+
+![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
+
+This piece can be found inside the base.html template which is a HTML skeleton document that is replicated across the site on every page but only written once, it contains various elements, the most important of which, are the Navigation and footer bars - saving us from having to re-write these ubiquitous elements for every page on our site.
+
+![Messaging](/thephonograph/main_app/static/images/messaging_03.png)
+
+This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
+
+![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 
 ![Sign_up_messaging](/thephonograph/main_app/static/images/signup.gif)
 
 ### Deployed application link
+
 [The Phonograph](https://hydro-keener-88414.herokuapp.com/)
+
 ### Challenges
+
 As a Team we did find it challenging to fully understand what happens in the background with the CBVs, as the code is a lot shorter and less obvious than express, it's not always immediate to fully comprehend and subsequently work with the code. We did struggle understanding how to pull the data from models that were linked by relationships and show it on the page (eg. how to display the Artist name from the Record page considering that the relationship was a many too many). We decided to implement a CSS Library that we did not use during the lectures before, Tailwind, and does take time and understanding to be able to fully make the best out of these kind of features. When debugging we did run a vast amount of Google searches and the answers that we get from the web are not always the easiest to understand/implement due to the wide amount of different ways in which developers work, especially based on their experience. 
 
 ### Features to be added in the future
+
 - The password reset email only gets sent to the Terminal at the moment, the link fully works and the functionality fully works, but it would be good to have it as an actual sent email instead. As well, we could implement a verification email to be sent upon registration of a new User.
 - Implement on the homepage a carousel showing the latest record that have been added to the database.
 - Different levels of privileges based on the User type. 
