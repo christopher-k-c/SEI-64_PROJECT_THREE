@@ -7,7 +7,9 @@
 Inspired by Discogs.com, the full-stack record collection app was built in 4 days on a Django Framework, connected to a PostgreSQL database which utilised vanilla CSS, Tailwind and JavaScript to style its front-end. Users can navigate the site as a guest, the site displays a collection of records and artists, these are all user uploaded. Registered users have upload, delete and edit privileges.
 
 
+## The Landing Page
 ![App home page screenshot](/thephonograph/main_app/static/images/Homepage%20Screenshot.png)
+## Record Details Page
 ![Record detail page screenshot](/thephonograph/main_app/static/images/Record%20Detail%20Screenshot.png)
 
 
