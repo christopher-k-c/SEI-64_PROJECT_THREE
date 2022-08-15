@@ -59,7 +59,7 @@ During the afternoon part of the Team started working on the styling for the app
 ##### Day 4
 The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
 
-
+One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccelful alerts when logging in. 
 ![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
 
 ### Deployed application link
