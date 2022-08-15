@@ -74,9 +74,17 @@ This last bit of javascript removes the alert messages after 3 seconds using the
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 
-This block of code is from a tutroial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
+This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
 
-Bceause the slides variable is an array of three html elements I can use a forEach loop to iterate over the array. For each iteration we are setting the translateX, a css attribute, to the sum of the current slides index value multiplied by 100% and then repeatting until the each element within the slides array has been set a translateX percentage value. Arrays use zero-based indexing, so the first index is 0, the second is 1 and the third is 2. So, 0 x 100 = 0 which means the first element in the array has it's translateX set to 0, the second elements is set to 100 and the third elemenst is set to 200.
+Because the slides variable is an array of three html elements I can use a forEach loop to iterate over the array. For each iteration we are setting the translateX, a css property, to the sum of the current slides index value multiplied by 100% and then repeating until the each element within the slides array has been set a translateX percentage value. 
+
+Arrays use zero-based indexing, so the first index is 0, the second is 1 and the third is 2. So, 0 x 100 = 0 which means the first element in the array has its translateX set to 0, the second element is set to 100 and the third element is set to 200. This now places the items on a horizontal plane, they should now be bleeding out of the right handside of the slide container.
+
+Now we assign the next button to a variable called nextSlide and we also set a variable called curSlide which will keep track of the current slide. We also assign the variable maxSlide, to the maximum number of slides possible. Variables, curSlide and maxSlide allow us to keep track of the current image being displayed, if the current images index value is strictly equal to the maximum number of slides i.e. 2, then we reset the curSlide to be the first index element in the array, 0. Else, if curSlide is less the the length, 0 or 1, then add 1 to the curSlide variable.
+
+Lastly, for each slide 
+
+
 
 
 ![Carousel](/thephonograph/main_app/static/images/carousel.png)
