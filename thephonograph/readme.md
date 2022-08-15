@@ -77,7 +77,7 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 - We do the same as above for the previous button but it's just the reverse.
 
-![Carousel](/thephonograph/main_app/static/images/carousel.png)
+![Carousel](/thephonograph/main_app/static/images/carousel.jpg)
 
 
 > Messaging Example
