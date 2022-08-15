@@ -63,33 +63,34 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 ### Examples of my contributions 
 
->* Carousel Example*
+> Carousel Example
 
-This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
+- This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
 
-Because the slides variable is an array of three html elements I can use a forEach loop to iterate over the array. For each iteration we are setting transforms property translateX, a css function, to the sum of the current slides index value multiplied by 100% and then repeating until the each element within the slides array has been set a translateX percentage value. 
+- Because the slides variable is an array of three html elements I can use a forEach loop to iterate over the array. For each iteration we are setting transforms property translateX, a css function, to the sum of the current slides index value multiplied by 100% and then repeating until the each element within the slides array has been set a translateX percentage value. 
 
-Arrays use zero-based indexing, so the first index is 0, the second is 1 and the third is 2. So, 0 x 100 = 0 which means the first element in the array has its translateX set to 0, the second element is set to 100 and the third element is set to 200. This now places the items on a horizontal plane, they should now be bleeding out of the right hand-side of the slide container. I will use the css property `overflow: hidden;` to hide this overflowing.
+- Arrays use zero-based indexing, so the first index is 0, the second is 1 and the third is 2. So, 0 x 100 = 0 which means the first element in the array has its translateX set to 0, the second element is set to 100 and the third element is set to 200. This now places the items on a horizontal plane, they should now be bleeding out of the right hand-side of the slide container. I will use the css property `overflow: hidden;` to hide this overflowing.
 
-Now we assign the next button to a variable called nextSlide and we also set a variable called curSlide which will keep track of the current slide. We also assign the variable maxSlide, to the maximum number of slides possible. Variables, curSlide and maxSlide allow us to keep track of the current image being displayed, if the current images index value is strictly equal to the maximum number of slides i.e. 2, then we reset the curSlide to be the first index element in the array, 0. Else, if curSlide is less the the length, 0 or 1, then add 1 to the curSlide variable.
+- Now we assign the next button to a variable called nextSlide and we also set a variable called curSlide which will keep track of the current slide. We also assign the variable maxSlide, to the maximum number of slides possible. Variables, curSlide and maxSlide allow us to keep track of the current image being displayed, if the current images index value is strictly equal to the maximum number of slides i.e. 2, then we reset the curSlide to be the first index element in the array, 0. Else, if curSlide is less the the length, 0 or 1, then add 1 to the curSlide variable.
 
-Lastly, for each image we move the slide by -100% every-time the button is clicked by setting `translateX(${100 * (indx - curSlide)}%`;. When the pages loads, The translateX values start as follows, slide zero is set to 0%, slide one as 100% and slide two as 200%. The first click sets slide zero to -100%, slide one is set to 0% and slide two is set to 100%. the second click sets slide zero to -200%, slide one to -100% and slide two too 0%. The last click initiates the conditional that checks curSlide with maxSlide too true, returning the first image to 0%, second to 100% and third to 200%.
+- Lastly, for each image we move the slide by -100% every-time the button is clicked by setting `translateX(${100 * (indx - curSlide)}%`;. When the pages loads, The translateX values start as follows, slide zero is set to 0%, slide one as 100% and slide two as 200%. The first click sets slide zero to -100%, slide one is set to 0% and slide two is set to 100%. the second click sets slide zero to -200%, slide one to -100% and slide two too 0%. The last click initiates the conditional that checks curSlide with maxSlide too true, returning the first image to 0%, second to 100% and third to 200%.
 
-We do the same as above for the previous button but it's just the reverse.
+- We do the same as above for the previous button but it's just the reverse.
 
 ![Carousel](/thephonograph/main_app/static/images/carousel.png)
 
->* Messaging Example*
 
-One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
+> Messaging Example
+
+- One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
 
-This piece can be found inside the base.html template which is a HTML skeleton document that is replicated across the site on every page but only written once, it contains various elements, the most important of which, are the Navigation and footer bars - saving us from having to re-write these ubiquitous elements for every page on our site.
+- This piece can be found inside the base.html template which is a HTML skeleton document that is replicated across the site on every page but only written once, it contains various elements, the most important of which, are the Navigation and footer bars - saving us from having to re-write these ubiquitous elements for every page on our site.
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_03.png)
 
-This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
+- This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 
