@@ -84,7 +84,11 @@ Now we assign the next button to a variable called nextSlide and we also set a v
 
 Lastly, for each image we move the slide by -100% everytime the button is clicked by setting `translateX(${100 * (indx - curSlide)}%`;. When the pages loads, The translateX values start as follows, slide zero is set too 0%, slide one as 100% and slide two as 200%. The first click sets slide zero to -100%, slide one is set to 0% and slide two is set to 100%. the second click sets slide zero to -200%, slide one to -100% and slide two too 0%. The last click initiates the conditional that checks curSldie with maxSlide to true, returning the first image to 0%, second to 100% and thrid to 200%.
 
+0 - 1 = -1 and -1 * 100 = -100
 
+1 - 1 = 0 and 0 * 100 = 0
+
+2 - 1 = 1 and 1 * 100 = 100
 
 
 ![Carousel](/thephonograph/main_app/static/images/carousel.png)
