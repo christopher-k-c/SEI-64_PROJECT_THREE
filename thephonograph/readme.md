@@ -61,8 +61,18 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 
 ### Examples of my contributions 
+
 One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccelful alerts when logging in. 
+
 ![Messaging](/thephonograph/main_app/static/images/messaging_01.png)
+
+This piece can be found inside the base.html template which is a HTML skeleton document that is replicated across the site on every page but only written one, it contains various elements the most important of which are the Navigation bar and footer. These two important elements are only written once here in the base.html template saving us from having to re-write the navigation bar and footer for every page on our site.
+
+![Messaging](/thephonograph/main_app/static/images/messaging_03.png)
+
+This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
+
+![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 
 ### Deployed application link
 [The Phonograph](https://hydro-keener-88414.herokuapp.com/)
