@@ -82,7 +82,7 @@ Arrays use zero-based indexing, so the first index is 0, the second is 1 and the
 
 Now we assign the next button to a variable called nextSlide and we also set a variable called curSlide which will keep track of the current slide. We also assign the variable maxSlide, to the maximum number of slides possible. Variables, curSlide and maxSlide allow us to keep track of the current image being displayed, if the current images index value is strictly equal to the maximum number of slides i.e. 2, then we reset the curSlide to be the first index element in the array, 0. Else, if curSlide is less the the length, 0 or 1, then add 1 to the curSlide variable.
 
-Lastly, for each image we move the slide by -100% everytime the button is clicked by setting `translateX(${100 * (indx - curSlide)}%`;. The translateX values on page load are as follows, slide zero is set too 0%, slide one as 100% and slide two as 200%. The first click sets slide zero to -100%, slide one is set to 0% and slide two is set to 100%. the next click sets slide zero to -200%, slide one to -100% and slide two too 0%.
+Lastly, for each image we move the slide by -100% everytime the button is clicked by setting `translateX(${100 * (indx - curSlide)}%`;. When the pages loads, The translateX values start as follows, slide zero is set too 0%, slide one as 100% and slide two as 200%. The first click sets slide zero to -100%, slide one is set to 0% and slide two is set to 100%. the second click sets slide zero to -200%, slide one to -100% and slide two too 0%. The last click initiates the conditional that checks curSldie with maxSlide to true, returning the first image to 0%, second to 100% and thrid to 200%.
 
 
 
