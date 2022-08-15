@@ -2,12 +2,16 @@
 
 # The Phonograph - A Collection of Records
 
-## Overview
+## Goal
+
+Inspired by Discogs.com, the full-stack record collection app was built in 4 days on a Django Framework, connected to a PostgreSQL database which utilised vanilla CSS, Tailwind and JavaScript to style its front-end. Users can navigate the site as a guest, the site displays a collection of records and artists, these are all user uploaded. Registered users have upload, delete and edit privileges.
+
+
 ![App home page screenshot](/thephonograph/main_app/static/images/Homepage%20Screenshot.png)
 ![Record detail page screenshot](/thephonograph/main_app/static/images/Record%20Detail%20Screenshot.png)
 
 
-### Requirements
+### Technical Requirements Satisfied
 - The application includes at least 2 related models, one of them being the User, and the major CRUD functions have been implemented
 - Some pages have a restricted access, therefore they can only be viewed by logged-in Users, the User is also able to sign-up/login, change the password and logout
 - The Users receives feedback messages for success/fail form submissions, some of the forms have mandatory fields otherwise the User is not allowed to submit them; after every submission the forms are cleared of the data
@@ -23,7 +27,7 @@
 
 ### Team Members
 - Elisabetta Maspero - [GitHub](https://github.com/emaspero) | [LinkedIn](https://www.linkedin.com/in/elisabetta-maspero-990bb3111/)
-- Cristopher Carey - [GitHub](https://github.com/christopher-k-c) | [LinkedIn](https://www.linkedin.com/in/chriskcarey/)
+- Christopher Carey - [GitHub](https://github.com/christopher-k-c) | [LinkedIn](https://www.linkedin.com/in/chriskcarey/)
 - Sam Hackwood - [GitHub](https://github.com/samhackwood) | [LinkedIn](https://www.linkedin.com/in/samuel-hackwood-40b050233/)
 
 ### Process
