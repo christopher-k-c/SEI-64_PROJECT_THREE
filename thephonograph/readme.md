@@ -63,6 +63,19 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 ### Examples of my contributions 
 
+# Solo Programming
+
+- The Artist Model and its full CRUD operations
+- Styling across the site from Landing page to Records detail, including Artist grid layout and more
+- Alert Messages with Bootstrap for Artist and Record CRUD, signup and more
+- Carousel
+
+# Pair programming 
+
+- Wrote the basic structure of the project together
+- TrackList Model Functionality built together
+- Created the record model and basic styling for the html pages
+
 > Carousel Example
 
 - This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
@@ -94,6 +107,8 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 - This last bit of javascript removes the alert messages after 3 seconds using the setTimeout method. Inside the method i am targeting the id of the alert html element which is created when the alert is triggered. I then set that html element to a display of none which hides the element from the page.
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
+
+> Messaging Visual Example
 
 ![Sign_up_messaging](/thephonograph/main_app/static/images/sign_up_image.gif)
 
