@@ -95,7 +95,7 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 
 ![Messaging](/thephonograph/main_app/static/images/messaging_02.png)
 
-![Sign_up_messaging](/thephonograph/main_app/static/images/signup.gif)
+![Sign_up_messaging](/thephonograph/main_app/static/images/sign_up.gif)
 
 ### Deployed application link
 
