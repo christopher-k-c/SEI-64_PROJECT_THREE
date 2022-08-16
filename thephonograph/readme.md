@@ -38,20 +38,20 @@ Inspired by Discogs.com, the full-stack record collection app was built in 4 day
 
 We stared off pair programming the fundamental elements fo the project and later moved onto solo programming.
 
-# Pair programming 
+### Pair programming 
 
 - Wrote the basic structure of the project together
 - TrackList Model Functionality built together
 - Created the record model and basic styling for the html pages
 
-# Solo Programming
+### Solo Programming
 
 - The Artist Model and its full CRUD operations
 - Styling across the site from Landing page to Records detail, including Artist grid layout and more
 - Alert Messages with Bootstrap for Artist and Record CRUD, signup and more
 - Carousel
 
-# Carousel Example
+### Carousel Example
 
 - This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
 
@@ -68,7 +68,7 @@ We stared off pair programming the fundamental elements fo the project and later
 ![Carousel](/thephonograph/main_app/static/images/carousel.jpg)
 
 
-> Messaging Example
+### Messaging Example
 
 - One of my contributions to this project was the user messaging, below is an example of the code that will display successful or unsuccessful alerts when logging in. 
 - However, It is my understanding that i have incorrectly implemented it. In this instance i have hardcoded the type of alert to the class rather than using the {{message.tags}} which has access to the following tags **debug, info, success, warning and error.** In the future i will refactor this code to be dynamic.
