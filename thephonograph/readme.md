@@ -33,35 +33,16 @@ Inspired by Discogs.com, the full-stack record collection app was built in 4 day
 - Christopher Carey - [GitHub](https://github.com/christopher-k-c) | [LinkedIn](https://www.linkedin.com/in/chriskcarey/)
 - Sam Hackwood - [GitHub](https://github.com/samhackwood) | [LinkedIn](https://www.linkedin.com/in/samuel-hackwood-40b050233/)
 
-### Process
-##### Day 1
-As a first step we started laying out the several connections using ERDs as that helped us to determine which Models were going to be part of the application and how they would interact with each other. We proceeded with creating a Trello board and assigning tasks to each member of the Team and, subsequently, using Figma we created a basic layout on how we would like the application to look like.
 
-The focus for the first day was mainly to create the starting code for this project, creating our first two Models (Record and Track-list) and adding the User auth functionality. At the end of the day, the User was able to sign-up, login and create/update/delete a Record and while in the record detail page the User was also able to add tracks to that specific record's track-list.
+### Contribution Examples
 
-###### Trello
-![Trello board screenshot picture](/thephonograph/main_app/static/images/Trello%20Screenshot.png)
-[Trello Board](https://trello.com/b/NnHgZg5d/project-03)
-###### ERD (Entity Relationship Diagrams)
-![ERDs screenshot](/thephonograph/main_app/static/images/ERDs%20Screenshot.png)
-###### Wireframes
-![Figma screenshot](/thephonograph/main_app/static/images/Figma%20Screenshot.png)
-###### User Stories
-![User Stories](/thephonograph/main_app/static/images/User%20Stories.png)
+We stared off pair programming the fundamental elements fo the project and later moved onto solo programming.
 
-##### Day 2
-During the second day, part of the time was dedicate to edit the sign-up form allowing the User to also input first name, last name and email address alongside the standard username and password. The functionality to allow the User to reset the password was also implemented. Two additional Models were created (Artist and Crate). The User was now allowed to add the favourite Records to its own Crate. The links-display has been amended, now a logged-in User can see and access several more pages compared to a non-logged-in User.
+# Pair programming 
 
-##### Day 3
-Several bugs were fixed during the third day, starting from the one that was preventing the Artist's name to show up on the Record's detail page. We have added the functionality to clear a form after submission and the feedback messages after success/fail form submission were now fully functioning.
-
-During the afternoon part of the Team started working on the styling for the application and the other part of the time started working on the readme file. 
-
-##### Day 4
-The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
-
-
-### Examples of my contributions 
+- Wrote the basic structure of the project together
+- TrackList Model Functionality built together
+- Created the record model and basic styling for the html pages
 
 # Solo Programming
 
@@ -70,13 +51,7 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 - Alert Messages with Bootstrap for Artist and Record CRUD, signup and more
 - Carousel
 
-# Pair programming 
-
-- Wrote the basic structure of the project together
-- TrackList Model Functionality built together
-- Created the record model and basic styling for the html pages
-
-> Carousel Example
+# Carousel Example
 
 - This block of code is from a tutorial I followed that produces an image carousel on our landing page. The javascript works as follows, we first assign the variable slides using querySelectorAll to each div element with the class slide. There are three html elements with a class of slide and inside each slide element there's an image tag.
 
@@ -111,6 +86,36 @@ The Team has been focusing mainly on the styling using Tailwind CSS Library and 
 > Messaging Visual Example
 
 ![Sign_up_messaging](/thephonograph/main_app/static/images/sign_up_image.gif)
+
+
+### Process
+
+##### Day 1
+As a first step we started laying out the several connections using ERDs as that helped us to determine which Models were going to be part of the application and how they would interact with each other. We proceeded with creating a Trello board and assigning tasks to each member of the Team and, subsequently, using Figma we created a basic layout on how we would like the application to look like.
+
+The focus for the first day was mainly to create the starting code for this project, creating our first two Models (Record and Track-list) and adding the User auth functionality. At the end of the day, the User was able to sign-up, login and create/update/delete a Record and while in the record detail page the User was also able to add tracks to that specific record's track-list.
+
+###### Trello
+![Trello board screenshot picture](/thephonograph/main_app/static/images/Trello%20Screenshot.png)
+[Trello Board](https://trello.com/b/NnHgZg5d/project-03)
+###### ERD (Entity Relationship Diagrams)
+![ERDs screenshot](/thephonograph/main_app/static/images/ERDs%20Screenshot.png)
+###### Wireframes
+![Figma screenshot](/thephonograph/main_app/static/images/Figma%20Screenshot.png)
+###### User Stories
+![User Stories](/thephonograph/main_app/static/images/User%20Stories.png)
+
+##### Day 2
+During the second day, part of the time was dedicate to edit the sign-up form allowing the User to also input first name, last name and email address alongside the standard username and password. The functionality to allow the User to reset the password was also implemented. Two additional Models were created (Artist and Crate). The User was now allowed to add the favourite Records to its own Crate. The links-display has been amended, now a logged-in User can see and access several more pages compared to a non-logged-in User.
+
+##### Day 3
+Several bugs were fixed during the third day, starting from the one that was preventing the Artist's name to show up on the Record's detail page. We have added the functionality to clear a form after submission and the feedback messages after success/fail form submission were now fully functioning.
+
+During the afternoon part of the Team started working on the styling for the application and the other part of the time started working on the readme file. 
+
+##### Day 4
+The Team has been focusing mainly on the styling using Tailwind CSS Library and deploying the app on Heroku.
+
 
 ### Deployed application link
 
